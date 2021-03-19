@@ -4,7 +4,6 @@ betsy_run.py --num_cores 60 --network_png db02.pdf \
 --input CellTypeAnnotation --input_file annotation_file.txt \  # annotation_file.txt should be a tab delimited file with two columns: Cell, CellType
 --output DoubletFinderAnalysis --output_file db01 \
 --mattr doubletfinder_use_sctransform=yes \
---input CellTypeAnnotation --input_file annot.txt \  
 --mattr doubletfinder_num_pc=5 \
 --mattr doubletfinder_doublet_rate=0.25 \
 --mattr doubletfinder_pk=0.15 \
