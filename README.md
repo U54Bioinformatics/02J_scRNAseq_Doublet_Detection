@@ -14,13 +14,25 @@ use [Scrublet.sh](https://github.com/U54Bioinformatics/02J_scRNAseq_Doublet_Dete
 
 ---  
 ### * about the cell annotation file:  
+The input "cell annotation" should be in the format of tab-delimited plain text file, looking like so:  
+
+  | Cell | Sample            | 
+  | ---- | -----             |
+  | Cell.1    | Celltype1    |
+  | Cell.2    | Celltype2    |
+  | Cell.3    | Celltype3    | 
+  | Cell.4    | Celltype1    |
+  | ...       | ...          |
+  
+  
+  ### * about the sample_file:  
 Jeff: 
 - DoubletFinder looks for possible pairs of cells that were merged when preparing the 10x samples.  Thus, you should run the doublet detection only on cells from a single sample.  It doesn't really make sense to run on cells from different samples since they can't form doublets if they prepared together.  If cells are from multiple samples, you can supply a "sample_file" that tells BETSY which sample each cell is from.  
 - You can leave sample_file out if all the cells in your gene expression file are from the same sample.  
 
-The input "cell annotation" should be in the format of tab-delimited plain text file, looking like so:  
+The input "sample_file" should be in the format of tab-delimited plain text file, looking like so:  
 
-  | Cell | Sample            | 
+  | Cell | CellType            | 
   | ---- | -----             |
   | Cell.1    | SampleA      |
   | Cell.2    | SampleB      |
@@ -28,4 +40,5 @@ The input "cell annotation" should be in the format of tab-delimited plain text 
   | Cell.4    | SampleA      |
   | ...       | ...          |
   
-  Here's [an example](https://raw.githubusercontent.com/U54Bioinformatics/02J_scRNAseq_Doublet_Detection/main/sample.txt) of the cell annotation file.  
+  Here's [an example](https://raw.githubusercontent.com/U54Bioinformatics/02J_scRNAseq_Doublet_Detection/main/sample.txt) of the sample_file.  
+
