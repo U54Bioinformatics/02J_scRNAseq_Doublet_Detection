@@ -3,7 +3,7 @@ betsy_run.py --num_cores 60 --network_png db02.pdf \
 --dattr SignalFile.preprocess=counts \
 --output DoubletFinderAnalysis --output_file db01 \
 --mattr doubletfinder_use_sctransform=yes \
---mattr singler_reference=human_primary_cell_atlas \  
+--mattr singler_reference=human_primary_cell_atlas \ 
 --mattr doubletfinder_num_pc=5 \
 --mattr doubletfinder_doublet_rate=0.25 \
 --mattr doubletfinder_pk=0.15 \
