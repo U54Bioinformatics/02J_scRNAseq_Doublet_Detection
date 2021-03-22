@@ -16,7 +16,7 @@ use [Scrublet.sh](https://github.com/U54Bioinformatics/02J_scRNAseq_Doublet_Dete
 ### * about the cell annotation file:  
 The input "cell annotation" should be in the format of tab-delimited plain text file, looking like so:  
 
-  | Cell | Sample            | 
+  | Cell | CellType            | 
   | ---- | -----             |
   | Cell.1    | Celltype1    |
   | Cell.2    | Celltype2    |
@@ -32,7 +32,7 @@ Jeff:
 
 The input "sample_file" should be in the format of tab-delimited plain text file, looking like so:  
 
-  | Cell | CellType            | 
+  | Cell | Sample            | 
   | ---- | -----             |
   | Cell.1    | SampleA      |
   | Cell.2    | SampleB      |
